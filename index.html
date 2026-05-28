@@ -1,0 +1,464 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>DuriShrimp Eco</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Be Vietnam Pro", sans-serif;
+      background: #f7faf5;
+      color: #1f2937;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    /* HEADER */
+
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      background: rgba(12, 45, 25, 0.85);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-container {
+      width: 90%;
+      max-width: 1400px;
+      margin: auto;
+      height: 80px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .logo i {
+      color: #8ddf63;
+      font-size: 1.6rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 35px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #8ddf63;
+    }
+
+    .btn-contact {
+      background: #72b944;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-contact:hover {
+      background: #5ca034;
+    }
+
+    /* HERO */
+
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0.45)),
+        url("banner.jpg") center/cover no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+      padding: 120px 20px 80px;
+    }
+
+    .hero-content {
+      max-width: 950px;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content span {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 18px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-content h1 {
+      font-size: 4.2rem;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.9);
+      max-width: 760px;
+      margin: auto auto 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #72b944;
+      color: white;
+      padding: 15px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #5ea339;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+      padding: 15px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      backdrop-filter: blur(5px);
+    }
+
+    /* VIDEO */
+
+    .video-section {
+      width: 90%;
+      max-width: 1200px;
+      margin: 90px auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: #16351f;
+      margin-bottom: 14px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    .video-wrapper {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      display: block;
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 100px;
+      background: #102919;
+      color: rgba(255,255,255,0.8);
+      padding: 70px 20px 35px;
+    }
+
+    .footer-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-box {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-box h3 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .footer-box p,
+    .footer-box a {
+      color: rgba(255,255,255,0.75);
+      line-height: 1.9;
+    }
+
+    .socials {
+      display: flex;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .socials a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      background: #72b944;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.95rem;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width: 900px) {
+
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+    }
+
+    @media(max-width: 600px) {
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="header-container">
+
+      <a href="#" class="logo">
+        <i class="fa-solid fa-leaf"></i>
+        DuriShrimp Eco
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#footer">Liên hệ</a></li>
+      </ul>
+
+      <a href="#video" class="btn-contact">
+        Xem video
+      </a>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <span>NÔNG NGHIỆP XANH • PHÁT TRIỂN BỀN VỮNG</span>
+
+      <h1>
+        Giải pháp phân bón hữu cơ
+        từ vỏ tôm và sầu riêng
+      </h1>
+
+      <p>
+        Hướng đến nền nông nghiệp tuần hoàn,
+        tối ưu dinh dưỡng cho cây trồng,
+        cải tạo đất và phát triển hệ sinh thái bền vững.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#video" class="btn-primary">
+          Xem video giới thiệu
+        </a>
+
+        <a href="#footer" class="btn-secondary">
+          Liên hệ
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- VIDEO -->
+
+  <section class="video-section" id="video">
+
+    <div class="section-title">
+      <h2>Video giới thiệu dự án</h2>
+
+      <p>
+        Giới thiệu quy trình, định hướng phát triển
+        và giá trị bền vững của DuriShrimp Eco.
+      </p>
+    </div>
+
+    <div class="video-wrapper">
+
+      <!-- Đổi video.mp4 thành tên video của bạn -->
+
+      <video controls autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+      </video>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer id="footer">
+
+    <div class="footer-container">
+
+      <div class="footer-box">
+        <h3>DuriShrimp Eco</h3>
+
+        <p>
+          Startup phân bón hữu cơ ứng dụng
+          chitosan sinh học từ phụ phẩm nông nghiệp
+          và thủy sản.
+        </p>
+      </div>
+
+      <div class="footer-box">
+        <h3>Thông tin liên hệ</h3>
+
+        <p>Email: durishrimp@gmail.com</p>
+        <p>Hotline: 0900 000 000</p>
+        <p>TP. Hồ Chí Minh, Việt Nam</p>
+      </div>
+
+      <div class="footer-box">
+        <h3>Mạng xã hội</h3>
+
+        <div class="socials">
+
+          <a href="#">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="#">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+
+          <a href="#">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 DuriShrimp Eco. All rights reserved.
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
+```
