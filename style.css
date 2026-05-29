@@ -56,11 +56,11 @@ header {
   font-weight: 700;
 }
 
-.logo i {
-  color: #8ddf63;
-  font-size: 1.6rem;
+.logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
 }
-
 .nav-menu {
   display: flex;
   gap: 35px;
@@ -245,7 +245,6 @@ footer {
 
 .socials {
   display: flex;
-  justify-content: center;
   gap: 14px;
   margin-top: 20px;
 }
