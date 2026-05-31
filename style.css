@@ -13,6 +13,10 @@ body {
   background: #f7faf5;
   color: #1f2937;
   overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
