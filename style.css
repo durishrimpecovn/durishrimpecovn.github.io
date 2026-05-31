@@ -364,11 +364,35 @@ footer{
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width: 900px){
 
-    .nav-menu{
-        display:none;
-    }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 15px;
+  }
+
+}
+
+@media(max-width: 768px){
+
+  .header-container{
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .nav-menu{
+    margin-top: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
 
     .hero-content h1{
         font-size:3rem;
